@@ -15,6 +15,9 @@ mod 'saz/timezone'
 # Security
 mod 'puppetlabs/firewall'
 
+# Digital Ocean Module
+mod 'jethrocarr/digitalocean'
+
 # Pupistry Companion Module
 mod 'pupistry',
   :git    => 'https://github.com/jethrocarr/puppet-pupistry.git',
