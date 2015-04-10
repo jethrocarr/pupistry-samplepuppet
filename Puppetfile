@@ -23,4 +23,8 @@ mod 'pupistry',
   :git    => 'https://github.com/jethrocarr/puppet-pupistry.git',
   :branch => 'master'
 
+# For stable environments, recommend grabbing the version from Puppetforge
+# rather than the github version above - but it's a great example on how
+# to pull module directly from git. :-)
+#  mod 'jethrocarr/pupistry'
 
