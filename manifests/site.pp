@@ -8,15 +8,8 @@ node default {
   # daemon to ensure you keep getting new artifacts applied.
   include pupistry
 
-  # Show off a bit ;-)
-  notify { 'Pupistry is fantastic, buy @jethrocarr beer!': }
-
-  # Chuck some example modules in so the first Puppet run
-  # actually does something noticable.
-  include ntp
-  class { 'timezone':
-    timezone => 'Pacific/Auckland',
-  }
+  # Demo of the branch
+  notify { 'You are running the "exampleofbranch" branch of the Puppet manifests! You can choose which branch you want to apply using `pupistry apply --environment X`': }
 
 }
 
