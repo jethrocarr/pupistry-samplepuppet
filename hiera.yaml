@@ -1,7 +1,7 @@
 ---
 :backends: yaml
 :yaml:
-  :datadir: "%{::settings::confdir}/environments/%{::environment}/hieradata"
+  :datadir: "%{::settings::confdir}/%{::environment}/hieradata"
 :hierarchy:
  - "environments/%{::environment}"
  - "nodes/%{::hostname}"
