@@ -19,7 +19,7 @@ node default {
   }
 
   # Example of Hiera override
-  if (hiera('hiera_override_test') == true) {
+  if (hiera('hiera_override_test', false) == true) {
     notify { 'Hiera is working correctly': }
   } else {
     notify { 'Hiera does not appear to be working correctly, possibly looking in wrong path': }
