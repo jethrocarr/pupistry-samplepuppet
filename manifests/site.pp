@@ -18,5 +18,11 @@ node default {
     timezone => 'Pacific/Auckland',
   }
 
+  # Example of Hiera override
+  if (hiera('hiera_override_test') == true) {
+    notify { 'Hiera is working correctly': }
+  } else {
+    notify { 'Hiera does not appear to be working correctly, possibly looking in wrong path': }
+  }
 }
 
