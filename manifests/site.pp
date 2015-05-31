@@ -26,3 +26,17 @@ node default {
   }
 }
 
+node 'packer' {
+  # This is another example node definition for a machine called 'packer', used
+  # to demonstrate how to bake machines with the packer feature built into
+  # Pupistry.
+
+  include pupistry
+
+  file { '/root/packer_built':
+    ensure  => present,
+    content => 'This machine was build using Packer and Pupistry',
+  }
+
+  notify { 'Applying manifests intended for default packer nodes': }
+}
