@@ -18,13 +18,17 @@ mod 'puppetlabs/firewall'
 # Digital Ocean Module
 mod 'jethrocarr/digitalocean'
 
-# Pupistry Companion Module
-mod 'pupistry',
-  :git    => 'https://github.com/jethrocarr/puppet-pupistry.git',
-  :branch => 'master'
+# Fact to identify the init system, required for Pupistry module
+mod 'jethrocarr/initfact'
 
-# For stable environments, recommend grabbing the version from Puppetforge
-# rather than the github version above - but it's a great example on how
-# to pull module directly from git. :-)
-#  mod 'jethrocarr/pupistry'
+# Pupistry Companion Module
+mod 'jethrocarr/pupistry'
+
+# If you want to pull the *latest* companion module from Git, comment out the
+# line above and uncomment this one. Just be tolerent of more risk of breakage.
+
+#mod 'pupistry',
+#  :git    => 'https://github.com/jethrocarr/puppet-pupistry.git',
+#  :branch => 'master'
+
 
