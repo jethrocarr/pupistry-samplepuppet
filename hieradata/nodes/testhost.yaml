@@ -1,0 +1,4 @@
+# This matches for any host with hostname of "testhost"
+---
+i_am_testhost: true
+

@@ -24,6 +24,10 @@ node default {
   } else {
     notify { 'Hiera does not appear to be working correctly, possibly looking in wrong path': }
   }
+
+  if (hiera('i_am_testhost', false) == true) {
+    notify { 'I am the testhost and no other': }
+  }
 }
 
 node 'packer' {
